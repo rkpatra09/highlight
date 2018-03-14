@@ -1,0 +1,13 @@
+
+<div id="search-component">
+  <h4>Hero Search</h4>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
+{{searchTerms}}
+  <ul class="search-result" id="result">
+      <li *ngFor="let hero of heros " [innerHTML]="hero.name | highlight: searchTerms"></li>
+    
+  </ul>
+</div>
+
+
